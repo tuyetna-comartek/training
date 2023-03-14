@@ -85,17 +85,31 @@ export const onMediumScore = (arr: Array<any>) => {
 };
 
 export const groupBy = (arr: Array<any>) => {
+  const ExcelentStudent: any[] = [];
+  const goodStudent: any[] = [];
+  const mediumStudent: any[] = [];
+  const weakStudent: any[] = [];
   const newArr = arr.reduce((score, row) => {
     if (row.medium > 9) {
-      console.log("gioi: ", row.name);
+      ExcelentStudent.push(row);
     } else if (row.medium >= 8 && row.medium <= 9) {
-      console.log("kha: ", row.name);
+      goodStudent.push(row);
     } else if (row.medium < 8 && row.medium >= 5) {
-      console.log("trung binh: ", row.name);
+      mediumStudent.push(row);
     } else {
-      console.log("yeu: ", row.name);
+      weakStudent.push(row);
     }
+    const groupArr = [
+      {
+        excelent: ExcelentStudent,
+        good: goodStudent,
+        medium: mediumStudent,
+        weak: weakStudent,
+      },
+    ];
+    return groupArr;
   }, [] as any[]);
+
   return newArr;
 };
 

@@ -14,14 +14,14 @@ import { TableScore } from "./component/TableScore";
 
 function App() {
   const arrayName = Data.reduce((item, row) => {
-    const arrayItem = row.name;
+    const arrayItem: any = row.name;
     const lastIndex = arrayItem.lastIndexOf(" ");
     const initialValue = 0;
     const key = row.subjects.reduce((score: any, row: any) => {
       return score + row.score;
     }, initialValue);
 
-    const newArray = [
+    const newArray: any = [
       ...item,
       {
         lastName: arrayItem.slice(0, lastIndex),
@@ -43,6 +43,7 @@ function App() {
 
   const bestStudent = findGoodStudent(dataScoreMedium);
   const groupStudent = groupBy(dataScoreMedium);
+  console.log("grpup: ", groupStudent);
 
   return (
     <div>
@@ -53,6 +54,28 @@ function App() {
         <span>2. </span>
         <TableScore arrayName={newArrayScore} />
         <hr />
+        <span>3. </span>
+        <span style={{ fontSize: "18px", fontWeight: "700" }}>
+          Hoc sinh gioi:
+        </span>
+        <TableScore arrayName={groupStudent[0].excelent} />
+        <br />
+        <span style={{ fontSize: "18px", fontWeight: "700" }}>
+          Hoc sinh kha:
+        </span>
+        <TableScore arrayName={groupStudent[0].good} />
+        <br />
+        <span style={{ fontSize: "18px", fontWeight: "700" }}>
+          Hoc sinh trung binh:
+        </span>
+        <TableScore arrayName={groupStudent[0].medium} />
+        <br />
+        <span style={{ fontSize: "18px", fontWeight: "700" }}>
+          Hoc sinh yeu:
+        </span>
+        <TableScore arrayName={groupStudent[0].weak} />
+        <hr />
+
         <div style={{ display: "flex", gap: "20px" }}>
           <span>4.</span>
           <span>hoc sinh gioi: </span>

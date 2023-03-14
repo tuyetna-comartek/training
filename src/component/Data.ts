@@ -139,5 +139,131 @@ export const Data = [
         ],
         class: 'C1',
     },
+    {
+        name: 'Nguyễn Ngoc Anh',
+        subjects: [
+            {
+                title: 'Math',
+                score: 4
+            },
+            {
+                title: 'English',
+                score: 8
+            },
+        ],
+        class: 'C1',
+    },
+    {
+        name: 'Nguyễn Ngoc Minh',
+        subjects: [
+            {
+                title: 'Math',
+                score: 6
+            },
+            {
+                title: 'English',
+                score: 3
+            },
+        ],
+        class: 'C1',
+    },
+    {
+        name: 'Nguyễn Hoang Long',
+        subjects: [
+            {
+                title: 'Math',
+                score: 5
+            },
+            {
+                title: 'English',
+                score: 5
+            },
+        ],
+        class: 'C1',
+    },
+    {
+        name: 'Nguyễn Hoai Ngoc',
+        subjects: [
+            {
+                title: 'Math',
+                score: 6
+            },
+            {
+                title: 'English',
+                score: 8
+            },
+        ],
+        class: 'C1',
+    },
+    {
+        name: 'Nguyễn Minh Anh',
+        subjects: [
+            {
+                title: 'Math',
+                score: 7.5
+            },
+            {
+                title: 'English',
+                score: 10
+            },
+        ],
+        class: 'C1',
+    },
+    {
+        name: 'Nguyễn Van Tuan',
+        subjects: [
+            {
+                title: 'Math',
+                score: 9
+            },
+            {
+                title: 'English',
+                score: 10
+            },
+        ],
+        class: 'C1',
+    },
+    {
+        name: 'Nguyễn Minh Giang',
+        subjects: [
+            {
+                title: 'Math',
+                score: 8
+            },
+            {
+                title: 'English',
+                score: 8
+            },
+        ],
+        class: 'C1',
+    },
+    {
+        name: 'Nguyễn Hoang Long',
+        subjects: [
+            {
+                title: 'Math',
+                score: 9
+            },
+            {
+                title: 'English',
+                score: 3
+            },
+        ],
+        class: 'C1',
+    },
+    {
+        name: 'Nguyễn Văn Thang',
+        subjects: [
+            {
+                title: 'Math',
+                score: 4
+            },
+            {
+                title: 'English',
+                score: 4
+            },
+        ],
+        class: 'C1',
+    },
     
 ]
