@@ -13,14 +13,6 @@ import { TableUser } from "./component/TableUser";
 import { TableScore } from "./component/TableScore";
 
 function App() {
-  console.log("data: ", Data);
-  const [newArray, setNewArray] = useState<any>(Data);
-
-  // const
-  // newArray.map((item: any) => {
-  //   setNewArray({ ...newArray, ... });
-  // });
-
   const arrayName = Data.reduce((item, row) => {
     const arrayItem = row.name;
     const lastIndex = arrayItem.lastIndexOf(" ");
@@ -44,20 +36,13 @@ function App() {
   const sortDataName: any = sortArrayName(arrayName, "Asc");
 
   const dataScoreMedium = onMediumScore(Data);
-  console.log("score medii: ", arrayName);
 
   const newArrayScore: any = sortArrayScore(dataScoreMedium, "Desc");
-  console.log("score: ", newArrayScore);
-
-  const groupedPeople = groupBy(dataScoreMedium);
-  console.log(groupedPeople);
 
   const totalMediumClass = totalMedium(dataScoreMedium);
-  console.log("order: ", totalMediumClass);
-  console.log("best: ", newArrayScore[0]);
 
   const bestStudent = findGoodStudent(dataScoreMedium);
-  console.log("best student: ", bestStudent);
+  const groupStudent = groupBy(dataScoreMedium);
 
   return (
     <div>

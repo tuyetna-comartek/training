@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export const sortArrayName = (arr: any, orderBy: string) => {
   if (orderBy === "Asc") {
     return arr.sort((a: any, b: any) => {
@@ -66,7 +64,6 @@ export const sortArrayScore = (arr: any, orderBy: string) => {
 
 export const onMediumScore = (arr: Array<any>) => {
   const newArr = arr.reduce((acc, obj) => {
-    console.log("obj: ", obj);
     const initialValue = 0;
 
     const key = obj.subjects.reduce((score: any, row: any) => {
@@ -80,7 +77,6 @@ export const onMediumScore = (arr: Array<any>) => {
         medium: key / obj.subjects.length,
       },
     ];
-    console.log("acc: ", acc);
 
     return acc;
   }, [] as any[]);
@@ -105,11 +101,8 @@ export const groupBy = (arr: Array<any>) => {
 
 export const totalMedium = (arr: Array<any>) => {
   const sum = arr.reduce((accumulator, currentValue) => {
-    console.log("current: ", currentValue);
-
     return accumulator + currentValue.medium;
   }, 0);
-  console.log("sdfjdk: ", sum / arr.length);
 
   return sum / arr.length;
 };
@@ -118,9 +111,7 @@ export const findGoodStudent = (arr: any) => {
   let bestStudent = {};
   const newArr = arr.reduce((score: any, row: any) => {
     if (row.medium > 9) {
-      console.log("row: ", row);
       bestStudent = row;
-      console.log("besttttt: ", bestStudent);
     }
     return bestStudent;
   }, {});
